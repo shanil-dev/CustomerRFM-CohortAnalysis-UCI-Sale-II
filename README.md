@@ -1,22 +1,22 @@
 # UCI Online Retail Sales & Customer Analytics Dashboard
 
-## 📋 Project Overview
+## Project Overview
 An end-to-end retail sales and customer analytics solution built to analyze multi-year online retail transaction data (2009–2011). The objective is to transform raw sales records into actionable business intelligence covering top-line financial performance, customer retention cohorts, and behavioral RFM segmentation.
 
-## 🗂️ Dataset
+## Dataset
 The project utilizes the UCI Online Retail Sales dataset, capturing transactional line items including invoice numbers, stock codes, product descriptions, quantities, invoice dates, unit prices, and customer IDs across an international retail customer base.
 
-## ⚠️ Business Problem
+## Business Problem
 Management previously lacked granular visibility into customer lifetime value, retention trajectories, and high-value purchaser identification due to siloed transactional data. Without automated segmentation, identifying core revenue drivers (such as Champions vs. At-Risk customers) and tracking new versus repeat customer acquisition trends required manual, uncoordinated effort.
 
-## 🎯 Business Objectives
+## Business Objectives
 * **Top-Line Financial Visibility:** Track total revenue, order volume, active customer counts, and average order values dynamically across custom date ranges.
 * **Customer Lifecycle & Cohort Tracking:** Measure month-over-month customer retention and churn rates to evaluate long-term engagement.
 * **Behavioral Customer Segmentation:** Implement RFM (Recency, Frequency, Monetary) scoring to classify customers into actionable tiers (Champions, Loyal, At Risk, Lost).
 * **Acquisition Mix Analysis:** Differentiate revenue contributions between first-time buyers (New Customers) and repeat purchasers.
 * **Executive Clarity:** Provide a structured, interactive 3-page reporting layout optimized for stakeholder review.
 
-  ## 📊 Key Metrics
+  ## Key Metrics
 * **Total Revenue:** Sum of line-item sales values (`Total = Quantity * UnitPrice`), reaching **17.36M** overall.
 * **Total Orders:** Distinct count of invoice transactions (`MaxInvoice`), totaling **36.975K** orders.
 * **Active Customers:** Unique count of customer IDs purchasing within the active filter context (**6K** distinct buyers).
@@ -28,14 +28,13 @@ Management previously lacked granular visibility into customer lifetime value, r
 
  ---
 
-## ❓ Business Questions & Executive Data Summary
+## Business Questions & Executive Data Summary
+ 1.How does monthly sales revenue perform dynamically, and when does peak demand occur?<br>
+ 2.What proportion of enterprise revenue is driven by new acquisition versus repeat customer loyalty?<br>
+ 3.Which quarter poses the highest operational volume and fulfillment demand?
 
-### 1.How does monthly sales revenue perform dynamically, and when does peak demand occur?
-### 3. What proportion of enterprise revenue is driven by new acquisition versus repeat customer loyalty?
-### 6. Which quarter poses the highest operational volume and fulfillment demand?
 
-### Executive Summary
-<div align="center"><h3>Executive Summary</h3></div>
+<div align="center"><h3><b>Executive Summary<b></h3></div>
 
 * Sales display consistent seasonal surges in Q4:
   * **2010:** Revenue held steady between **0.50M** (February baseline) and **0.70M** (March peak) during Q1–Q3, before surging in Q4 from **0.83M** (September) to **1.03M** (October) and reaching an annual peak of **1.17M** in November.
@@ -46,17 +45,61 @@ out of **8.31M**, demonstrating that long-term stability is overwhelmingly drive
 
 *  Q4 accounts for the largest concentration of sales, scaling up to **1.17M** (Nov 2010) and **1.2M** (Nov 2011) per month—a **~100% volume increase** over Q1 baseline levels (**0.5M–0.6M**).
 
-  ## 💡 Key Insights
-
-<img width="48%" alt="2010" src="https://github.com/user-attachments/assets/503e4bac-fbf1-46fa-9f6e-46ef84dd688a" />
+  ## Key Insights
+### 1. Revenue & Customer Acquisition Dynamics
+<br><br>
+<img width="48%"  alt="2010" src="https://github.com/user-attachments/assets/503e4bac-fbf1-46fa-9f6e-46ef84dd688a" />
 <img width="48%" alt="2011" src="https://github.com/user-attachments/assets/89b50bf4-3339-457a-bed6-b675b3f0ba86" />
 
-
-  ### 1. Revenue & Customer Acquisition Dynamics
+<br><br>
 * **High Average Basket Size:** An Average Order Value of **2.95K** across **36.975K** orders indicates strong order quantities per invoice transaction.
 * **Q4 Holiday Seasonality:** November consistently serves as the highest-revenue month across consecutive years (**1.17M** in 2010 and **1.2M** in 2011), driven by holiday order surges.
 * **Repeat Revenue Dominance:** Over time, returning customers drive up to **79.51% (6.6M)** of total monetary value.
 
- <img width="48%" alt="New Vs Previous 2010" src="https://github.com/user-attachments/assets/b79472df-b64d-4036-be8c-a58d3dd2eefe" />
-<img width="48%" alt="New Vs Previous 2011" src="https://github.com/user-attachments/assets/304f6316-92a1-4eec-8ecb-52bd95d3933e" />
+ <img width="48%" hieght="30%" alt="New Vs Previous 2010" src="https://github.com/user-attachments/assets/b79472df-b64d-4036-be8c-a58d3dd2eefe" />&nbsp;&nbsp;
+<img width="48%"  hieght="50%" alt="New Vs Previous 2011" src="https://github.com/user-attachments/assets/304f6316-92a1-4eec-8ecb-52bd95d3933e" />
  
+### 2. Behavioral RFM Tiers
+<br><br>
+<div align="center"><img width="50%"  alt="Customer Segment and Revenue" src="https://github.com/user-attachments/assets/8082d120-c82b-4d21-abe8-eae5813d3424" /></div>
+<br><br>
+
+* **Champions Dominance:** The **Champions** segment generates **11.57K** (66.64% of total sales) from **1.26K** active buyers, representing the core foundation of enterprise revenue.
+* **Loyal & At-Risk Balance:** **Loyal Customers** contribute **2.68K** (15.45%), while **At-Risk (High Value)** customers represent **888.13K** (5.11%) across **0.25K** accounts, marking an immediate target window for win-back campaigns.
+* **Dormant Segment Volume:** **Lost / Inactive** accounts account for **1.24K** users (**312.49K** revenue), signaling areas for automated re-engagement or lifecycle archiving.
+
+ ### 3. Cohort Retention & Lifetime Value (LTV)
+<br><br>
+ <img width="48%"  alt="CLTV" src="https://github.com/user-attachments/assets/f119a970-c8e7-4cf2-ab97-f5fb9ce86783" />&nbsp;&nbsp;
+<img width="48%"  alt="Monthly Retention" src="https://github.com/user-attachments/assets/3fe3b9ba-260d-44b5-9122-9f9a7f509817" />
+<br><br>
+* **Steady Engagement Baselines:** Monthly retention curves show consistent repeat purchasing behavior, with M1 retention holding stable around **15% to 35%** across active acquisition months.
+* **Cumulative Revenue Growth:** Cumulative cohort tracking demonstrates steady compounding value over a 12–18 month horizon, validating strong post-acquisition monetization.
+
+## Strategic Recommendations
+
+1. **Capitalize on Q4 Seasonality:** Allocate inventory and marketing budgets by late Q3 to maximize performance during the November revenue peak (**1.17M–1.2M**).
+2. **VIP Loyalty Structure for Champions:** Introduce exclusive rewards for the **Champions** segment (accounting for **66.64%** of revenue) to maximize customer lifetime value (LTV).
+3. **Targeted Win-Back Campaigns:** Deploy automated discount offers to the **At-Risk (High Value)** tier (**888.13K** revenue at risk) to prevent migration into the Lost/Inactive category.
+
+##  Data Model & Architecture
+
+```text
+                 Silver_dim_calendar
+                          │
+                          │ (1:M)
+                          │
+     rfm ──────── Silver_fact_uci_sales
+  (Customer Grain)      (Transaction Grain)
+```
+* **Star Schema Design:** The model centers on a transactional fact table (Silver_fact_uci_sales) connected to a customer-level RFM dimension (rfm) and a conformed calendar dimension (Silver_dim_calendar) to support robust time-intelligence calculations.
+---
+
+## Tools & Technologies & Architecture
+
+* **Microsoft Fabric:** Utilized for data pipeline orchestration, Dataflows Gen2, and OneLake storage architecture.
+* **SQL:** Used for backend database setup (UCI_SalesII) data validation and data cleansing.
+* **Power BI Desktop:** Built for designing the interactive, 3-page executive report layout (Overview, Cohort Analysis, RFM Segmentation).
+* **DAX (Data Analysis Expressions):** Engineered for advanced time-intelligence measures, including dynamic New vs. Repeat customer revenue splits using CALCULATE, FILTER, VALUES, and ALLEXCEPT.
+* **Dataflows & Pipelines (ETL Automation):** Integrated Fabric Dataflows (Gen2) and Data Pipelines to automate data ingestion from source files, automate transformations, and orchestrate scheduled refreshes across operational tables.
+* **AI & Copilot Support:** Applied AI-assisted calculations, data profiling, and generative text insights inside the Fabric environment to support metric validation and business commentary generation.
